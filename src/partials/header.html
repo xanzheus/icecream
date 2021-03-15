@@ -45,7 +45,7 @@
                     <use href="./images/svg/sprites.svg#icon-close"></use>
                 </svg>
             </button>
-            <button class="button button--icon" type="button">
+            <button class="button button--icon" type="button" data-order-open>
                 Buy now
                 <svg width="10" height="10">
                     <use href="./images/svg/sprites.svg#icon-vector-right"></use>
@@ -70,4 +70,66 @@
             </ul>
         </div>
     </div>
+    <!-- MODAL-->
+    <div data-order class="backdrop-order is-hidden">
+        <div class="order">
+            <h1 class="order__text">Leave your details, we will call you back</h1>
+            <form class="order-form">
+                <div class="order-form__field">
+                    <label class="order-form__label">Name
+                        <input type="text" name="name" class="order-form____input">
+                    </label>
+                    <div class="order-form__thumb">
+                        <svg class="order-form__icon" width="18" height="18">
+                            <use href=""></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="order-form__field">
+                    <label class="order-form__label">Phone
+                        <input type="tel" name="phone-number" class="order-form__input">
+                    </label>
+                    <div class="order-form__thumb">
+                        <svg class="order-form__icon" width="18" height="18">
+                            <use href=""></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="order-form__field">
+                    <label class="order-form__label">Email
+                        <input type="email" name="email" class="order-form__input">
+                    </label>
+                    <div class="order-form__thumb">
+                        <svg class="order-form__icon" width="18" height="18">
+                            <use href=""></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="order-form__textarea">
+                    <label class="order-form__label">Comment
+                        <textarea name="comment" rows="7" placeholder="Введите текст" class="order-form__textarea-text"></textarea>
+                    </label>
+                </div>
+                <div class="order-checkbox">
+                    <input class="order-checkbox__consent" type="checkbox" name="consent" value="consent" id="consent">
+                    <label for="consent" class="order-checkbox__label">
+                        I agree to the newsletter and accept <a href="#" class="order-checkbox__conditions">Terms of an agreement</a>
+                    </label>
+                </div>
+                <button type="submit" class="button button--accent">Send
+                    <svg width="10" height="10">
+                        <use href="./images/svg/sprites.svg#icon-vector-right"></use>
+                    </svg>
+                </button>
+            </form>
+            <button data-order-close class="functional-button">
+                <svg width="11" height="11">
+                    <use href=""></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+
+
 </header>
