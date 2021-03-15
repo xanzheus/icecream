@@ -1,9 +1,3 @@
-// ======== STYLES TO DELETE ==========
-@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap');
-
-// ======== END STYLES TO DELETE ==========
-
 .products {
   display: flex;
   flex-direction: column;
@@ -33,20 +27,20 @@
     letter-spacing: 0.04em;
     text-align: center;
     text-transform: uppercase;
-
-    color: rgb(212, 20, 67);
+    
+    color: rgb(212,20,67);
 
     @media (min-width: $mobile) {
       margin-bottom: 31px;
     }
-
+  
     @media (min-width: $tablet) {
       margin-bottom: 39px;
 
       font-size: 58px;
       line-height: 1.145;
     }
-
+  
     @media (min-width: $desktop) {
       margin-bottom: 49px;
 
@@ -66,21 +60,22 @@
     text-align: center;
     text-transform: uppercase;
 
-    color: rgb(255, 165, 186);
+
+    color: rgb(255,165,186);
 
     margin-bottom: 15px;
 
     @media (min-width: $mobile) {
       margin-bottom: 31px;
     }
-
+  
     @media (min-width: $tablet) {
       margin-bottom: 39px;
 
       font-size: 26px;
       line-height: 1.145;
     }
-
+  
     @media (min-width: $desktop) {
       font-size: 30px;
     }
@@ -89,9 +84,10 @@
   &__list {
     @media (min-width: $mobile) {
       width: 280px;
-    }
-    @media (min-width: $tablet) {
 
+    }
+  
+    @media (min-width: $tablet) {
       width: 700px;
       margin-bottom: 39px;
 
@@ -100,39 +96,34 @@
       align-items: center;
       justify-content: center;
     }
-
+  
     @media (min-width: $desktop) {
       width: 1050px;
-
       margin-bottom: 49px;
     }
   }
 
   &__card {
-
       position: relative;
-      overflow: hidden;
 
-    width: 100%;
-    height: 598px;
+      width: 100%;
+      height: 598px;
 
     @media (min-width: $mobile) {
-      width: 280px;
-    }
+        width: 280px;
+      }
     @media (min-width: $tablet) {
-      width: 220px;
-      height: 589px;
-    }
+        width: 220px;
+        height: 589px;
+      }
     @media (min-width: $desktop) {
-
-        width: 336px;
+        width: 335px;
         height: 735px;
-
     }
   }
 
   &__card:not(:last-child) {
-    @media (min-width: $mobile) and (max-width: $tablet - 1px) {
+    @media (min-width: $mobile) and (max-width: $tablet - 1px){
       margin-bottom: 17px;
     }
     @media (min-width: $tablet) {
@@ -162,19 +153,22 @@
       left: 0;
     }
     @media (min-width: $desktop) {
-      width: 336px;
-      height: 336px;
+      width: 335px;
+      height: 335px;
     }
   }
 
-  &__wrapper {
+  &__wrapper,
+  &__wrapper--back {
     position: absolute;
     top: 113px;
     left: 0;
-
     z-index: 1;
     overflow: hidden;
- 
+
+    //perspective: 1500px;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;  
     transition: transform 500ms $timing-function-main,
                 background-color 500ms $timing-function-main;
 
@@ -182,46 +176,59 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-
+    
     height: 485px;
     width: 100%;
     padding: 156px 0 41px;
 
     border-radius: 24px;
 
+
     @media (min-width: $tablet) {
       top: 111px;
-      height: 478px;
       padding: 147px 0 40px;
     }
     @media (min-width: $desktop) {
       top: 210px;
       height: 525px;
-      width: 336px;
+
       padding: 158px 0 50px;
     }
   }
 
+  &__wrapper--back {
+    -webkit-box-shadow: 0px 0px 18px -5px rgba(2, 2, 2, 0.2);
+    -moz-box-shadow: 0px 0px 18px -5px rgba(2, 2, 2, 0.2);
+    box-shadow: 0px 0px 18px -5px rgba(2, 2, 2, 0.2);
+  }
+
+  &__wrapper--back &__button {
+    display: none;
+    transition: opacity $time-main $timing-function-main, 
+                visibility $time-main $timing-function-main;
+  }
+
   &__subtitle {
-    font-family: 'Titan One';
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.15;
-    letter-spacing: 0.04em;
-    text-align: center;
+      font-family: 'Titan One';
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: .04em;
+      text-align: center;
+
+      margin-bottom: 0;
 
       text-transform: uppercase;
       color: var(--light-text-color);
       transition: transform 500ms $timing-function-main,
                   color 500ms $timing-function-main;
 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @media (min-width: $desktop) {
+      @media (min-width: $desktop) {
       font-size: 30px;
       font-weight: 400;
       line-height: 1.133;
@@ -234,23 +241,22 @@
     font-style: normal;
     font-weight: 700;
     line-height: 1.5;
-    letter-spacing: 0.04em;
+    letter-spacing: .04em;
     text-align: center;
     width: 200px;
 
     margin-bottom: 30px;
 
-    transition: transform 500ms $timing-function-main;
     color: var(--light-text-color);
 
     @media (min-width: $tablet) {
       width: 198px;
-      line-height: 1.76;
       margin-bottom: 40px;
     }
     @media (min-width: $desktop) {
       width: 241px;
       font-size: 16px;
+      line-height: 1.76;
       margin-bottom: 62px;
     }
   }
@@ -263,6 +269,7 @@
     background-image: url('../images/products/points.svg');
     margin-bottom: 30px;
     margin-top: 30px;
+
   }
 
   &__button {
@@ -273,7 +280,6 @@
     height: 40px;
     border: 0;
     border-radius: 50%;
-
     color: var(--accent-primary-color);
     background-color: var(--light-text-color);
   
@@ -281,7 +287,6 @@
                 color $time-main $timing-function-main,
                 transform $time-main $timing-function-main,
                 box-shadow $time-main $timing-function-main;
-
   }
 
   &__arrow,
@@ -292,11 +297,7 @@
     transform: translate(-50%, -50%);
     fill: currentColor;
 
-    transition: opacity 500ms $timing-function-main;
-  }
-
-  &__close {
-    opacity: 0;
+    transition: opacity $time-main $timing-function-main;
   }
 
   &__button:hover,
@@ -308,65 +309,28 @@
     box-shadow: 1px 0px 8px 0px rgba(34, 60, 80, 0.2);
   }
 
-  &__overlay {
-    position: absolute;
-    top: 237px;
-    left: 0;
-    width: 270px;
-    transform: translateX(-101%);
-    transition: transform 500ms $timing-function-main;
-    background-color: var(--light-text-color);
-    z-index: 1;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 15px 31px 15px;
-
-    @media (min-width: $tablet) {
-      padding: 12px 11px 12px;
-      top: 225px;
-      width: 210px;
-    }
-    @media (min-width: $desktop) {
-      padding: 15px 0 15px;
-      top: 245px;
-      width: 324px;
-    }
-  }
-
   &__check {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    opacity: 0;
-    z-index: 1;
-    bottom: 80px;
-    left: 100px;
-    @media (min-width: $tablet) {
-      bottom: 47px;
-      left: 193px;
-    }
-    @media (min-width: $desktop) {
-      bottom: 47px;
-      left: 147px;
-    }
+    bottom: 0;
+    left: 0;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    outline: none;
   }
 
-  checkbox:focus ~ &_wrapper &__button {
-    outline: 2px solid black;
-    background-color: var(--accent-primary-color);
-  }
-
-  #card-first:focus ~ &_wrapper &__button,
-  #card-second:focus ~ &_wrapper &__button,
-  #card-third:focus ~ &_wrapper &__button {
+  &__check:focus + &__wrapper &__button{
     background-color: var(--accent-primary-color);
     color: var(--light-text-color);
-    -webkit-box-shadow: 1px 0px 8px 0px rgba(34, 60, 80, 0.2);
-    -moz-box-shadow: 1px 0px 8px 0px rgba(34, 60, 80, 0.2);
-    box-shadow: 1px 0px 8px 0px rgba(34, 60, 80, 0.2);
+  }
+
+  &__check:checked ~ &__wrapper--back {
+    transform: rotateY(0deg);
+  }
+
+  &__check:checked ~ &__wrapper {
+    transform: rotateY(180deg);
   }
 
   #card-first:checked + &__wrapper {
@@ -381,30 +345,60 @@
     background-color: #c2e297b8;
   }
 
-  &__check:checked ~ &__wrapper &__subtitle {
-    transform: scale(1.1);
-    color: var(--accent-hover-color);
+  &__check:checked ~ &__wrapper--back &__button {
+    display: block;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
   }
 
-  &__check:checked ~ &__wrapper &__text {
-    transform: scale(0);
+  &__check:checked ~ &__wrapper--back &__close {
+    display: block;
   }
 
-  &__check:checked ~ &__wrapper &__close {
-    opacity: 1;
-  }
+  &__wrapper--back {
+    transform: rotateY(180deg);
 
-  &__check:checked ~ &__wrapper &__arrow {
-    opacity: 0;
-  }
+    .products__subtitle {
+      color: var(--accent-primary-color);
+      margin-bottom: 20px;
 
-  &__check:checked ~ &__wrapper &__overlay {
-    transform: translateX(5px);
+      @media (min-width: $tablet) {
+        margin-bottom: 16px;
+      }
+    }
+    .products__subtitle::after {
+      display: none;
+    }
+  } 
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    width: 80%;
+
+    @media (min-width: $tablet) and (max-width: $desktop - 1px) {
+      width: 90%;
+      padding-left: 7px;
+      padding-right: 7px;
+    }
   }
 
   &__qualities {
     width: 240px;
     padding-left: 0;
+    margin-bottom: 35px;
+
+    @media (min-width: $tablet) {
+      width: 198px;
+      margin-bottom: 28px;
+    }
+    @media (min-width: $desktop) {
+      margin-bottom: 30px;
+      width: 240px;
+    }
   }
 
   &__item {
@@ -414,7 +408,7 @@
   }
 
   &__item:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 14px;
   }
 
   &__icon {
@@ -438,11 +432,109 @@
     letter-spacing: .04em;
     text-align: left;
     color: var(--accent-primary-color);
+    margin-bottom: 0;
 
     @media (min-width: $desktop) {
       font-size: 16px;
       line-height: 1.76;
     }
+  }
+
+  &__price-box{
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 36px;
+    
+    @media (min-width: $tablet) {
+      margin-bottom: 28px;
+    }
+    @media (min-width: $desktop) {
+      margin-bottom: 30px;
+    }
+    
+  }
+
+  &__price-title {
+    font-family: 'Titan One';
+    font-size: 18px;
+    line-height: 1.153;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--light-text-color);
+    margin-bottom: 0;
+    margin-right: 10px;
+
+    @media (min-width: $tablet) {
+
+    }
+    @media (min-width: $desktop) {
+      font-size: 28px;
+    }
+  }
+
+  &__price {
+    position: relative;
+    font-family: 'Titan One';
+    font-size: 26px;
+    line-height: 1.142;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--accent-primary-color);
+    @media (min-width: $tablet) {
+      font-size: 30px;
+    }
+    @media (min-width: $desktop) {
+      font-size: 36px;
+    }
+  }
+
+  &__price::after {
+    content: '$';
+    position: absolute;
+    right: -1px;
+    top: -3px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--light-text-color);
+    z-index: -1;
+
+    width: 25px;
+    height: 25px;
+    right: -15px;
+    top: -10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Titan One';
+    font-size: 14px;
+    line-height: 1.142;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--accent-primary-color);
+
+    @media (min-width: $tablet) {
+      width: 30px;
+      height: 30px;
+      right: -20px;
+      top: -12px;
+      font-size: 16px;
+    }
+    @media (min-width: $desktop) {
+      width: 35px;
+      height: 35px;
+      right: -20px;
+      top: -12px;
+      font-size: 18px;
+    }
+  }
+
+  & .button {
+    align-self: center;
   }
 }
 
@@ -455,19 +547,28 @@
 
 .first {
     .products__wrapper {
-      background-color: var(--accent-secondary-color);
+      background-color: #ffb8ca;
+    }
+    .products__wrapper--back {
+      background-color: #ffb8caA8;
     }
   }
 
 .second {
-    .products__wrapper {
-      background-color: var(--cards-second-bgcolor);
+  .products__wrapper {
+    background-color: #f0d1a5;
+  }
+    .products__wrapper--back  {
+      background-color: #f0d1a5A8;
     }
   }
 
 .third {
-    .products__wrapper {
-      background-color: var(--cards-third-bgcolor);
+  .products__wrapper {
+    background-color: #c2e297;
+  }
+    .products__wrapper--back  {
+      background-color: #c2e297A8;
     }
   }
 
@@ -506,319 +607,3 @@
       background-image: url('../images/products/product3_desktop.webp');
     }
   }
-
-// ======== STYLES TO DELETE ==========
-
-a {
-  text-decoration: none;
-  display: block;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-li {
-  list-style-type: none;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-bottom: 0;
-}
-
-/*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
-
-/*
-Document
-========
-*/
-
-/**
-Use a better box model (opinionated).
-*/
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/**
-Use a more readable tab size (opinionated).
-*/
-
-:root {
-  -moz-tab-size: 4;
-  tab-size: 4;
-}
-
-/**
-1. Correct the line height in all browsers.
-2. Prevent adjustments of font size after orientation changes in iOS.
-*/
-
-html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
-
-/*
-Sections
-========
-*/
-
-/**
-Remove the margin in all browsers.
-*/
-
-body {
-  margin: 0;
-}
-
-/**
-Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
-*/
-
-body {
-  font-family: system-ui, -apple-system,
-    /* Firefox supports this but not yet `system-ui` */ 'Segoe UI', Roboto,
-    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
-}
-
-/*
-Grouping content
-================
-*/
-
-/**
-1. Add the correct height in Firefox.
-2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
-*/
-
-hr {
-  height: 0; /* 1 */
-  color: inherit; /* 2 */
-}
-
-/*
-Text-level semantics
-====================
-*/
-
-/**
-Add the correct text decoration in Chrome, Edge, and Safari.
-*/
-
-abbr[title] {
-  text-decoration: underline dotted;
-}
-
-/**
-Add the correct font weight in Edge and Safari.
-*/
-
-b,
-strong {
-  font-weight: bolder;
-}
-
-/**
-1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
-2. Correct the odd 'em' font sizing in all browsers.
-*/
-
-code,
-kbd,
-samp,
-pre {
-  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
-    monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
-
-/**
-Add the correct font size in all browsers.
-*/
-
-small {
-  font-size: 80%;
-}
-
-/**
-Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
-*/
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-/*
-Tabular data
-============
-*/
-
-/**
-1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
-2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
-*/
-
-table {
-  text-indent: 0; /* 1 */
-  border-color: inherit; /* 2 */
-}
-
-/*
-Forms
-=====
-*/
-
-/**
-1. Change the font styles in all browsers.
-2. Remove the margin in Firefox and Safari.
-*/
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
-}
-
-/**
-Remove the inheritance of text transform in Edge and Firefox.
-1. Remove the inheritance of text transform in Firefox.
-*/
-
-button,
-select {
-  /* 1 */
-  text-transform: none;
-}
-
-/**
-Correct the inability to style clickable types in iOS and Safari.
-*/
-
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-  -webkit-appearance: button;
-}
-
-/**
-Remove the inner border and padding in Firefox.
-*/
-
-::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-/**
-Restore the focus styles unset by the previous rule.
-*/
-
-:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-
-/**
-Remove the additional ':invalid' styles in Firefox.
-See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
-*/
-
-:-moz-ui-invalid {
-  box-shadow: none;
-}
-
-/**
-Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
-*/
-
-legend {
-  padding: 0;
-}
-
-/**
-Add the correct vertical alignment in Chrome and Firefox.
-*/
-
-progress {
-  vertical-align: baseline;
-}
-
-/**
-Correct the cursor style of increment and decrement buttons in Safari.
-*/
-
-::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
-1. Correct the odd appearance in Chrome and Safari.
-2. Correct the outline style in Safari.
-*/
-
-[type='search'] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
-}
-
-/**
-Remove the inner padding in Chrome and Safari on macOS.
-*/
-
-::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
-1. Correct the inability to style clickable types in iOS and Safari.
-2. Change font properties to 'inherit' in Safari.
-*/
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
-}
-
-/*
-Interactive
-===========
-*/
-
-/*
-Add the correct display in Chrome and Safari.
-*/
-
-summary {
-  display: list-item;
-}
-// ======== END STYLES TO DELETE ==========
