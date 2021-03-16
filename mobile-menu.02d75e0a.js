@@ -121,9 +121,13 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 (function () {
   var menuBtnRef = document.querySelector("[data-menu-button]");
   var mobileMenuRef = document.querySelector("[data-menu]");
+  var btnNoneRef = document.querySelector("[data-menu-none]");
+  var btnNoneSecondRef = document.querySelector("[data-menu-none-second]");
   var mobileBtnClose = document.querySelector("[data-menu-close]");
   menuBtnRef.addEventListener("click", function () {
     mobileMenuRef.classList.toggle("is-open");
+    btnNoneRef.classList.toggle("is-none");
+    btnNoneSecondRef.classList.toggle("is-none");
   });
   menuBtnRef.addEventListener("click", toggleMenu);
 
@@ -133,6 +137,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   mobileBtnClose.addEventListener("click", function () {
     mobileMenuRef.classList.toggle("is-open");
+    btnNoneRef.classList.toggle("is-none");
+    btnNoneSecondRef.classList.toggle("is-none");
     document.body.classList.toggle("menu-open");
   });
 })();
@@ -164,7 +170,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53886" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58459" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

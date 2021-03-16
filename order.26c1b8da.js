@@ -121,10 +121,12 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 (function () {
   var refs = {
     openOrderBtn: document.querySelector('[data-order-open]'),
+    openOrderSecBtn: document.querySelector('[data-order-open-second]'),
     closeOrderBtn: document.querySelector('[data-order-close]'),
     order: document.querySelector('[data-order]')
   };
   refs.openOrderBtn.addEventListener('click', toggleOrder);
+  refs.openOrderSecBtn.addEventListener('click', toggleOrder);
   refs.closeOrderBtn.addEventListener('click', toggleOrder);
 
   function toggleOrder() {
@@ -160,7 +162,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53886" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58459" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
