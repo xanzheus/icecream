@@ -169,6 +169,8 @@
     color: var(--accent-primary-color);
     opacity: 0;
 
+    transition: opacity $time-main $timing-function-main;
+
     @media screen and (min-width: $desktop) {
       font-size: 14px;
     }
