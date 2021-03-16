@@ -32,18 +32,19 @@
   }
 
   &__title-thumb {
-    margin-top: 110px;
+    margin-top: 137px;
     position: relative;
     max-width: 220px;
     z-index: 1;
 
     @media screen and (min-width: $tablet) {
       max-width: 168px;
-      margin-top: 0px;
+      margin-top: 15px;
     }
 
     @media screen and (min-width: $desktop) {
       max-width: 277px;
+      margin-top: 99px;
     }
   }
 
@@ -133,7 +134,7 @@
     }
 
     @media screen and (min-width: $desktop) {
-      bottom: -54px;
+      bottom: -42px;
       right: 0;
     }
   }
@@ -285,12 +286,12 @@
       display: inline-block;
       position: absolute;
       right: 0;
-      top: 56px;
+      top: 71px;
     }
 
     @media screen and (min-width: $desktop) {
       right: 0;
-      top: 118px;
+      top: 134px;
     }
   }
 
