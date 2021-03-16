@@ -1,3 +1,6 @@
+
+// ----- COMMON STYLES ----- //
+
 .locations {
   padding-top: 43px;
   padding-bottom: 57px;
@@ -125,10 +128,6 @@
   line-height: 1.833;
 }
 
-.address {
-  list-style: none;
-}
-
 .address__link {
   color: var(--copyright-text-color);
   font-weight: 500;
@@ -179,6 +178,9 @@
 .button--secondary .button__icon-right {
   fill: var(--light-text-color);
 }
+
+// ----- TABLET ----- //
+
 
 @media screen and (min-width: $tablet) {
   .locations {
@@ -264,6 +266,9 @@
     width: 175px;
   }
 }
+
+// ----- DESCTOP ----- //
+
 
 @media screen and (min-width: $desktop) {
   .locations {
