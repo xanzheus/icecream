@@ -24,6 +24,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  list-style: none;
 }
 
 .locations__item {
@@ -122,6 +123,10 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 1.833;
+}
+
+.address {
+  list-style: none;
 }
 
 .address__link {
