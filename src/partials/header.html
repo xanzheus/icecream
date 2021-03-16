@@ -73,15 +73,15 @@
     <!-- MODAL-->
     <div data-order class="backdrop-order is-hidden">
         <div class="order">
-            <h1 class="order__text">Leave your details, we will call you back</h1>
+            <p class="order__text">Leave your details, we will call you back</p>
             <form class="order-form">
                 <div class="order-form__field">
                     <label class="order-form__label">Name
-                        <input type="text" name="name" class="order-form____input">
+                        <input type="text" name="name" class="order-form__input">
                     </label>
                     <div class="order-form__thumb">
                         <svg class="order-form__icon" width="18" height="18">
-                            <use href=""></use>
+                            <use href="./images/svg/sprites.svg#icon-person"></use>
                         </svg>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                     </label>
                     <div class="order-form__thumb">
                         <svg class="order-form__icon" width="18" height="18">
-                            <use href=""></use>
+                            <use href="./images/svg/sprites.svg#icon-phone"></use>
                         </svg>
                     </div>
                 </div>
@@ -101,7 +101,7 @@
                     </label>
                     <div class="order-form__thumb">
                         <svg class="order-form__icon" width="18" height="18">
-                            <use href=""></use>
+                            <use href="./images/svg/sprites.svg#icon-email"></use>
                         </svg>
                     </div>
                 </div>
@@ -115,21 +115,19 @@
                     <label for="consent" class="order-checkbox__label">
                         I agree to the newsletter and accept <a href="#" class="order-checkbox__conditions">Terms of an agreement</a>
                     </label>
-                </div>
-                <button type="submit" class="button button--accent">Send
+                </div>                
+                <button type="submit" class="button button--icon">
+                    Send an order
                     <svg width="10" height="10">
                         <use href="./images/svg/sprites.svg#icon-vector-right"></use>
                     </svg>
                 </button>
             </form>
-            <button data-order-close class="functional-button">
+            <button data-order-close class="functional-button__icon">
                 <svg width="11" height="11">
-                    <use href=""></use>
+                    <use href="./images/svg/sprites.svg#icon-close"></use>
                 </svg>
             </button>
         </div>
     </div>
-
-
-
 </header>
