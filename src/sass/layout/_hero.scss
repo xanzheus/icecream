@@ -153,6 +153,18 @@
       line-height: 1.428;
       margin-bottom: 20px;
     }
+
+    &--hidden {
+      font-size: 8px;
+      line-height: 1.5;
+      color: transparent;
+
+      @media screen and (min-width: $desktop) {
+        font-size: 14px;
+        line-height: 1.428;
+        margin-bottom: 20px;
+      }
+    }
   }
 
   &__overlay {
@@ -170,11 +182,23 @@
     background-color: var(--accent-secondary-color);
     color: var(--accent-primary-color);
     opacity: 0;
+    transform: translateX(-101%);
 
-    transition: opacity $time-main $timing-function-main;
+    transition: transform $time-main $timing-function-main,
+      opacity $time-main $timing-function-main;
 
     @media screen and (min-width: $desktop) {
       font-size: 14px;
+    }
+
+    &--second {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: transform $time-main $timing-function-main,
+        opacity $time-main $timing-function-main;
     }
   }
 
@@ -227,7 +251,13 @@
   }
 
   &__check:checked ~ &__overlay {
+    transform: translateX(0);
     opacity: 1;
+  }
+
+  &__check:checked ~ &__overlay--second {
+    transform: translateX(101%);
+    opacity: 0;
   }
 
   &__check:checked + .hero__button &__arrow {
