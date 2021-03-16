@@ -95,6 +95,7 @@
 
 .mobile-menu {
   position: fixed;
+  overflow: scroll;
   top: 0;
   right: -100vw;
   z-index: 4;
@@ -136,20 +137,28 @@
     width: 209px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 19px;
+    margin-bottom: 27px;
   }
 
   &__list {
-    border-top: 1px solid #e18298;
-  }
-
-  &__item {
+    padding-top: 8px;
+    //margin: -8px;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      #e18298,
+      #e18298 1px,
+      var(--bgc-mobile-menu) 1px,
+      var(--bgc-mobile-menu) 42px
+    );
     border-bottom: 1px solid #e18298;
   }
 
+  &__item {
+    margin: 8px;
+  }
   &__link {
     display: inline-block;
-    padding: 12px 21px;
+    padding: 4px 21px;
     font-family: $ff-main;
     font-weight: 700;
     font-size: 14px;
