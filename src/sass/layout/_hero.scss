@@ -17,7 +17,7 @@
   }
 
   &__description-thumb {
-      display: none;
+    display: none;
     @media screen and (min-width: $tablet) {
       position: relative;
       display: block;
@@ -37,74 +37,74 @@
     max-width: 220px;
     z-index: 1;
 
-  @media screen and (min-width: $tablet) {
-    max-width: 168px;
-    margin-top: 0px;
-  }
+    @media screen and (min-width: $tablet) {
+      max-width: 168px;
+      margin-top: 0px;
+    }
 
-  @media screen and (min-width: $desktop) {
-    max-width: 277px;
-  }
+    @media screen and (min-width: $desktop) {
+      max-width: 277px;
+    }
   }
 
   &__title {
-  font-family: $ff-accent;
-  font-size: 26px;
-  line-height: 1.153;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--light-text-color);
-  margin-bottom: 19px;
-
-  @media screen and (min-width: $tablet) {
-    font-size: 22px;
-    line-height: 1.136;
-    margin-bottom: 20px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    font-size: 38px;
-    line-height: 1.157;
-    margin-bottom: 25px;
-  }
-}
-&__span {
-  font-family: $ff-accent;
-  font-size: 48px;
-  line-height: 0.958;
-  text-transform: uppercase;
-  color: var(--accent-primary-color);
-
-  @media screen and (min-width: $tablet) {
-    font-size: 34px;
-    line-height: 0.911;
+    font-family: $ff-accent;
+    font-size: 26px;
+    line-height: 1.153;
     letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--light-text-color);
+    margin-bottom: 19px;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 22px;
+      line-height: 1.136;
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 38px;
+      line-height: 1.157;
+      margin-bottom: 25px;
+    }
   }
-  @media screen and (min-width: $desktop) {
-    font-size: 58px;
-    line-height: 0.896;
+  &__span {
+    font-family: $ff-accent;
+    font-size: 48px;
+    line-height: 0.958;
+    text-transform: uppercase;
+    color: var(--accent-primary-color);
+
+    @media screen and (min-width: $tablet) {
+      font-size: 34px;
+      line-height: 0.911;
+      letter-spacing: 0.04em;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 58px;
+      line-height: 0.896;
+    }
   }
-}
 
   &__icecream {
-  position: absolute;
-  top: 8px;
-  left: 81px;
-  animation-duration: 1500ms;
+    position: absolute;
+    top: 8px;
+    left: 81px;
+    animation-duration: 1500ms;
 
-  @media screen and (min-width: $tablet) {
-    left: 340px;
-    top: 26px;
-  }
+    @media screen and (min-width: $tablet) {
+      left: 340px;
+      top: 26px;
+    }
 
-  @media screen and (min-width: $desktop) {
-    left: 467px;
-    top: 70px;
+    @media screen and (min-width: $desktop) {
+      left: 467px;
+      top: 70px;
+    }
   }
-}
 
   &__milk {
-      display: none;
+    display: none;
 
     @media screen and (min-width: $tablet) {
       display: block;
@@ -121,16 +121,16 @@
   }
 
   &__woman {
-      display: none;
+    display: none;
 
-      @media screen and (min-width: $tablet) {
-        display: block;
-        position: absolute;
-        bottom: -34px;
-        right: 0;
-        animation-duration: 1500ms;
-        animation-delay: 500ms;
-      }
+    @media screen and (min-width: $tablet) {
+      display: block;
+      position: absolute;
+      bottom: -34px;
+      right: 0;
+      animation-duration: 1500ms;
+      animation-delay: 500ms;
+    }
 
     @media screen and (min-width: $desktop) {
       bottom: -54px;
@@ -138,45 +138,45 @@
     }
   }
 
-&__description {
-  @media screen and (min-width: $tablet) {
+  &__description {
+    @media screen and (min-width: $tablet) {
+      font-size: 8px;
+      line-height: 1.5;
+      color: var(--light-text-color);
+      margin-bottom: 7px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+      line-height: 1.428;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     font-size: 8px;
+    font-style: normal;
+    font-weight: 700;
     line-height: 1.5;
-    color: var(--light-text-color);
-    margin-bottom: 7px;
+    letter-spacing: 0.04em;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    background-color: var(--accent-secondary-color);
+    color: var(--accent-primary-color);
+    opacity: 0;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+    }
   }
 
-  @media screen and (min-width: $desktop) {
-    font-size: 14px;
-    line-height: 1.428;
-    margin-bottom: 20px;
-  }
-}
-
-&__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 8px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.5;
-  letter-spacing: .04em;
-  width: 100%;
-  height: 100%;
-  border-radius: 6px;
-  background-color: var(--accent-secondary-color);
-  color: var(--accent-primary-color);
-  opacity: 0;
-
-  @media screen and (min-width: $desktop) {
-    font-size: 14px;
-  }
-}
-
-&__button {
-  position: relative;
-  display: block;
+  &__button {
+    position: relative;
+    display: block;
     cursor: pointer;
     z-index: 1;
     width: 18px;
@@ -186,17 +186,17 @@
 
     color: var(--accent-primary-color);
     background-color: var(--light-text-color);
-  
+
     transition: background-color $time-main $timing-function-main,
-                color $time-main $timing-function-main,
-                transform $time-main $timing-function-main,
-                box-shadow $time-main $timing-function-main;
+      color $time-main $timing-function-main,
+      transform $time-main $timing-function-main,
+      box-shadow $time-main $timing-function-main;
 
     @media screen and (min-width: $desktop) {
       width: 26px;
       height: 26px;
     }
-}
+  }
 
   &__button:hover,
   &__button:focus {
@@ -276,7 +276,7 @@
 
 .counter {
   &__thumb {
-      display: none;
+    display: none;
 
     @media screen and (min-width: $tablet) {
       display: inline-block;
@@ -289,17 +289,17 @@
       right: 0;
       top: 118px;
     }
-    }
+  }
 
   &__number {
-      position: relative;
-      z-index: 1;
-      font-family: $ff-accent;
-      font-size: 28px;
-      line-height: 1.142;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--accent-primary-color);
+    position: relative;
+    z-index: 1;
+    font-family: $ff-accent;
+    font-size: 28px;
+    line-height: 1.142;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent-primary-color);
 
     @media screen and (min-width: $desktop) {
       font-size: 46px;
@@ -362,18 +362,18 @@
     border-radius: 50%;
     background-color: var(--text-label-color);
 
-  @media screen and (min-width: $tablet) {
-    width: 324px;
-    height: 322px;
-    left: 268px;
-    top:-7px;
+    @media screen and (min-width: $tablet) {
+      width: 324px;
+      height: 322px;
+      left: 268px;
+      top: -7px;
     }
 
-  @media screen and (min-width: $desktop) {
-    width: 538px;
-    height: 538px;
-    left: 348px;
-    top: 20px;
+    @media screen and (min-width: $desktop) {
+      width: 538px;
+      height: 538px;
+      left: 348px;
+      top: 20px;
     }
   }
 }
