@@ -1,10 +1,28 @@
 .gallery {
   background-image: linear-gradient(
     to bottom,
-    var(--second-bgc) 45%,
-    var(--light-text-color) 45%,
+    var(--second-bgc) 48%,
+    var(--light-text-color) 48%,
     var(--light-text-color) 100%
   );
+
+  @media (min-width: $tablet) {
+      background-image: linear-gradient(
+    to bottom,
+      var(--second-bgc) 45%,
+      var(--light-text-color) 45%,
+      var(--light-text-color) 100%
+  );
+    }
+
+    @media (min-width: $desktop) {
+    background-image: linear-gradient(
+      to bottom,
+      var(--second-bgc) 43%,
+      var(--light-text-color) 43%,
+      var(--light-text-color) 100%
+  );
+    }
 
   padding-top: 49px;
   padding-bottom: 40px;
@@ -20,6 +38,7 @@
   &__thumb {
     display: flex;
     justify-content: center;
+    // align-items: center;
     margin: -1px;
 
     @media (min-width: $tablet) {
