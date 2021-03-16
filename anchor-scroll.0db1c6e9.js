@@ -117,25 +117,32 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/mobile-menu.js":[function(require,module,exports) {
-(function () {
-  var menuBtnRef = document.querySelector("[data-menu-button]");
-  var mobileMenuRef = document.querySelector("[data-menu]");
-  var mobileBtnClose = document.querySelector("[data-menu-close]");
-  menuBtnRef.addEventListener("click", function () {
-    mobileMenuRef.classList.toggle("is-open");
-  });
-  menuBtnRef.addEventListener("click", toggleMenu);
+})({"js/anchor-scroll.js":[function(require,module,exports) {
+$(document).ready(function () {
+  // Add smooth scrolling to all links
+  $("a").on('click', function (event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault(); // Store hash
 
-  function toggleMenu() {
-    document.body.classList.toggle("menu-open");
-  }
+      var hash = this.hash; // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
 
-  mobileBtnClose.addEventListener("click", function () {
-    mobileMenuRef.classList.toggle("is-open");
-    document.body.classList.toggle("menu-open");
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function () {
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }
+
+    var mobileMenuRef = document.querySelector("[data-menu]");
+    mobileMenuRef.classList.toggle("is-open", false);
+    var bodyElement = document.body;
+    bodyElement.classList.toggle("menu-open", false);
   });
-})();
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -339,5 +346,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/mobile-menu.js"], null)
-//# sourceMappingURL=/mobile-menu.02d75e0a.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/anchor-scroll.js"], null)
+//# sourceMappingURL=/anchor-scroll.0db1c6e9.js.map
