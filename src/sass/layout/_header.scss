@@ -167,7 +167,8 @@
   }
 }
 
-body.menu-open {
+body.menu-open,
+body.order-open {
   overflow-y: hidden;
 }
 
@@ -254,7 +255,7 @@ body.menu-open {
   }
 
   @media screen and(min-width: $desktop) {
-    max-width: 520px;
+    width: 450px;
   }
 }
 
@@ -430,6 +431,10 @@ body.menu-open {
   margin-right: auto;
   margin-left: auto;
   width: 150px;
+
+  @media screen and(min-width: $tablet) {
+    width: 220px;
+  }
 }
 
 .order .functional-button__icon {
