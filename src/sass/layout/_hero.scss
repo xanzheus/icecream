@@ -250,6 +250,7 @@
   }
 
   & .button--accent {
+    display: block;
     color: var(--light-text-color);
     background-color: var(--accent-primary-color);
     min-width: 62px;
