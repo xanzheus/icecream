@@ -226,16 +226,11 @@
     opacity: 1;
   }
 
-  &__check:checked + &__button{
-    background-color: var(--accent-primary-color);
-    color: var(--light-text-color);
-  }
-
-  &__check:checked + .hero__button .hero__arrow {
+  &__check:checked + .hero__button &__arrow {
     opacity: 0;
   }
 
-  &__check:checked + .hero__button .hero__close {
+  &__check:checked + .hero__button &__close {
     opacity: 1;
   }
 }
