@@ -8,7 +8,8 @@
     refs.openReadBtn.addEventListener('click', toggleRead);
     refs.closeReadBtn.addEventListener('click', toggleRead);
   
-    function toggleRead() {
+  function toggleRead() {
+      document.body.classList.toggle("read-open");
       refs.read.classList.toggle('is-hidden');
     }
   })();
