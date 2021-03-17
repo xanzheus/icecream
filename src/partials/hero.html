@@ -14,13 +14,13 @@
                 </li>
 
                 <li class="compositions-links__item list">
-                    <a class="button link" href="#How-it’s-made?">How it’s made?</a>
+                    <a class="button link" href="#made">How it’s made?</a>
                 </li>
             </ul>
         </div>
 
         <div class="hero__description-thumb">
-            <p class="hero__description">
+            <p class="hero__description--hidden">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             </p>
 
@@ -34,6 +34,7 @@
                     <use href="./images/svg/sprites.svg#icon-arrow-left"></use>
                 </svg>
             </label>
+
             <div class="hero__overlay">
                 <ul class="hero__list list">
                     <li class="hero__item">
@@ -61,6 +62,13 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="hero__overlay--second">
+                <p class="hero__description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                </p>
+            </div>
+
         </div>
         <div class="counter__thumb">
             <ul class="counter__list list">
@@ -77,29 +85,33 @@
         </div>
 
         <div class="circle">
-            <picture>
-                <source 
-                srcset="./images/2-hero/desktop/icecream-desktop.webp 1x, ./images/2-hero/desktop/icecream-desktop@2x.webp 2x" 
-                media="(min-width: 1280px)" type="image/webp">
-                <source 
-                srcset="./images/2-hero/desktop/icecream-desktop.png 1x, ./images/2-hero/desktop/icecream-desktop@2x.png 2x" 
-                media="(min-width: 1280px)">
-    
-                <source 
-                srcset="./images/2-hero/tablet/icecream-tablet.webp 1x, ./images/2-hero/tablet/icecream-tablet@2x.webp 2x" 
-                media="(min-width: 768px)" type="image/webp">
-                <source 
-                srcset="./images/2-hero/tablet/icecream-tablet.png 1x, ./images/2-hero/tablet/icecream-tablet@2x.png 2x" 
-                media="(min-width: 768px)">
-    
-    
-                <source 
-                srcset="./images/2-hero/mobi/icecream-mobile.webp 1x, ./images/2-hero/mobi/icecream-mobile@2x.webp 2x" 
-                type="image/webp">
-                <source 
-                srcset="./images/2-hero/mobi/icecream-mobile.png 1x, ./images/2-hero/mobi/icecream-mobile@2x.png 2x" >
-                <img class="hero__icecream animate__zoomInDown" src="./images/2-hero/mobi/icecream-mobile.png" alt="Icecream">
-            </picture>
+            <a class="hero__mask--link" href="#">
+                <img class="hero__mask" src="./images/2-hero/mask.png" alt="mask">
+                <img class="hero__mask hero__mask--eyes" src="./images/2-hero/4-yese.png" alt="eyes">
+                <picture>
+                    <source 
+                    srcset="./images/2-hero/desktop/icecream-desktop.webp 1x, ./images/2-hero/desktop/icecream-desktop@2x.webp 2x" 
+                    media="(min-width: 1280px)" type="image/webp">
+                    <source 
+                    srcset="./images/2-hero/desktop/icecream-desktop.png 1x, ./images/2-hero/desktop/icecream-desktop@2x.png 2x" 
+                    media="(min-width: 1280px)">
+        
+                    <source 
+                    srcset="./images/2-hero/tablet/icecream-tablet.webp 1x, ./images/2-hero/tablet/icecream-tablet@2x.webp 2x" 
+                    media="(min-width: 768px)" type="image/webp">
+                    <source 
+                    srcset="./images/2-hero/tablet/icecream-tablet.png 1x, ./images/2-hero/tablet/icecream-tablet@2x.png 2x" 
+                    media="(min-width: 768px)">
+        
+        
+                    <source 
+                    srcset="./images/2-hero/mobi/icecream-mobile.webp 1x, ./images/2-hero/mobi/icecream-mobile@2x.webp 2x" 
+                    type="image/webp">
+                    <source 
+                    srcset="./images/2-hero/mobi/icecream-mobile.png 1x, ./images/2-hero/mobi/icecream-mobile@2x.png 2x" >
+                    <img class="hero__icecream animate__zoomInDown" src="./images/2-hero/mobi/icecream-mobile.png" alt="Icecream">
+                </picture>
+            </a>
         </div>
 
         <picture>
@@ -135,5 +147,6 @@
             media="(min-width: 768px)">
             <img class="hero__woman animate__slideInLeft" src="./images/2-hero/tablet/woman-tablet.png" alt="woman with icecream">
         </picture>
+
     </div>
 </section>
