@@ -3,17 +3,17 @@
   align-items: center;
   padding-top: 130px;
   padding-bottom: 20px;
- background-color: var(--second-bgc);
+  background-color: var(--second-bgc);
   background-image: url(../images/4-about/mobi/milk-320-1x.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 0% 95%;
-  
+
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-      background-image: url("../images/4-about/mobi/milk-320-2x.png");
-    } 
+    background-image: url('../images/4-about/mobi/milk-320-2x.png');
+  }
 
   @media screen and (min-width: $tablet) {
     background-image: none;
@@ -29,12 +29,11 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-  
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
       background-image: url(../images/4-about/desktop/milk-1200-2x.png);
-      
     }
   }
 }
@@ -50,7 +49,7 @@
     margin-bottom: 50px;
   }
 
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: $desktop) {
     font-size: 58px;
     line-height: 1.138;
     letter-spacing: 0.06em;
@@ -76,30 +75,30 @@
     font-size: 26px;
     line-height: 1.153;
   }
-  
-  @media screen and (min-width: $desktop){
+
+  @media screen and (min-width: $desktop) {
     font-size: 30px;
     line-height: 1.133;
   }
 }
 
 .about__motto {
-    font-family: $ff-main;
-    font-weight: 500;
-    letter-spacing: 0em;
-    text-align: left;
-    color:var(--dark--text-color);
-    font-size: 12px;
-    line-height: 1.62;
-    margin-bottom: 31px;
+  font-family: $ff-main;
+  font-weight: 500;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--dark--text-color);
+  font-size: 12px;
+  line-height: 1.62;
+  margin-bottom: 31px;
 
-  @media (min-width: $tablet){
+  @media (min-width: $tablet) {
     font-size: 14px;
     line-height: 1.76;
     margin-bottom: 28px;
   }
 
-  @media (min-width: $desktop){
+  @media (min-width: $desktop) {
     font-size: 16px;
     letter-spacing: 0.04em;
     margin-bottom: 35px;
@@ -109,91 +108,156 @@
 .about__thumb-image {
   font-family: $ff-main;
   font-weight: 500;
-  color:var(--copyright-text-color); 
+  color: var(--copyright-text-color);
   font-size: 12px;
   line-height: 1.62;
   margin-bottom: 17px;
-  
-  @media (min-width: $tablet){
-  font-size: 14px;
-  line-height: 1.76;
-  letter-spacing: 0.04em;
-  margin-bottom: 0;
-}
-  @media (min-width:$desktop){
+
+  @media (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 1.76;
+    letter-spacing: 0.04em;
+    margin-bottom: 0;
+  }
+  @media (min-width: $desktop) {
     font-size: 14px;
     line-height: 1.94;
-    
-    
   }
 }
 
 .about__image {
   height: 279px;
   width: 280px;
-  background-image: url("../images/4-about/mobi/cow-320-1x.png");
+  background-image: url('../images/4-about/mobi/cow-320-1x.png');
   background-size: contain;
   margin-bottom: 46px;
-    
+
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) { 
-      background-image: url(../images/4-about/mobi/cow-320-2x.png);
-    }
-    
+    screen and (min-resolution: 2dppx) {
+    background-image: url(../images/4-about/mobi/cow-320-2x.png);
+  }
+
   @media (min-width: $tablet) {
     height: 339px;
     width: 340px;
-    background-image: url("../images/4-about/tablet/cow-768-1x.png");
+    background-image: url('../images/4-about/tablet/cow-768-1x.png');
     margin-bottom: 0;
     margin-right: 17px;
-       
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) { 
-      background-image: url("../images/4-about/tablet/cow-768-2x.png"); 
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/4-about/tablet/cow-768-2x.png');
     }
   }
 
-  @media (min-width:$desktop){   
-   height: 516px;
-   width: 516px;
-   background-image: url("../images/4-about/desktop/cow-1200-1x.png");
-   margin-right: 74px;
-   @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-      background-image: url("../images/4-about/desktop/cow-1200-1x.png");    
+  @media (min-width: $desktop) {
+    height: 516px;
+    width: 516px;
+    background-image: url('../images/4-about/desktop/cow-1200-1x.png');
+    margin-right: 74px;
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/4-about/desktop/cow-1200-1x.png');
     }
   }
 }
 
 .about__text {
-  @media (min-width:$tablet) {
+  @media (min-width: $tablet) {
     width: 340px;
     padding-top: 50px;
-   }
+  }
 
-  @media (min-width:$desktop) {
-     width: 463px;  
+  @media (min-width: $desktop) {
+    width: 463px;
   }
 }
 
 .about__thumb {
-   @media (min-width:$tablet) {
+  @media (min-width: $tablet) {
     display: flex;
-   }
+  }
 }
 
-.about__quote {  
+.about__quote {
   margin-bottom: 21px;
   margin-top: 10px;
-  
-  @media (min-width:$tablet) {
+
+  @media (min-width: $tablet) {
     margin-bottom: 57px;
   }
-   @media (min-width:$desktop) {
+  @media (min-width: $desktop) {
     margin-bottom: 38px;
     margin-top: 27px;
-   }
+  }
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  opacity: 1;
+  z-index: 5;
+  overflow-y: scroll;
+  transition: opacity $time-main $timing-function-main,
+    visibility $time-main $timing-function-main;
+}
+.read {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 88vw;
+  max-width: 709px;
+  max-height: 509px;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: var(--dark--text-color);
+  transition: transform $time-main $timing-function-main;
+}
+.backdrop.is-hidden .read {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+.modal-read-button {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  fill: var(--accent-primary-color);
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  z-index: 5;
+
+  @media screen and(min-width: $tablet) {
+    right: 15px;
+    top: 15px;
+  }
+}
+.read__about-thumb {
+  display: flex;
+  position: relative;
+}
+.read__about-ability {
+  position: absolute;
+  right: 50px;
+  font-family: $ff-main;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.166;
+  color: var(--accent-primary-color);
+  width: 250px;
+  z-index: 5;
 }
