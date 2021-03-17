@@ -267,6 +267,33 @@
   &__check:checked + .hero__button &__close {
     opacity: 1;
   }
+
+  &__mask {
+    display: none;
+    @media screen and (min-width: $desktop) {
+      display: block;
+      position: absolute;
+      top: 239px;
+      left: 491px;
+      width: 185px;
+      height: 130px;
+      z-index: 3;
+      opacity: 0;
+
+      &--eyes {
+        top: 180px;
+        left: 531px;
+        width: 120px;
+        height: 128px;
+        z-index: 2;
+      }
+
+      &--link:hover &,
+      &--link:focus & {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .compositions-links {
