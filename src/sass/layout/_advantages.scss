@@ -16,8 +16,6 @@
 }
 
 .advantages__item {
-  // transition: transform 500ms $timing-function-main;
-
   &::before {
     display: block;
     content: ' ';
@@ -43,10 +41,6 @@
   &:not(:last-child) {
     margin-bottom: 38px;
   }
-
-  // &:hover {
-  //   transform: scale(1.1);
-  // }
 }
 
 @media screen and (min-device-pixel-ratio: 2),
