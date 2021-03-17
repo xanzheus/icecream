@@ -15,10 +15,6 @@
   letter-spacing: 0.04em;
 }
 
-.swiper-wrapper {
-  padding-bottom: 130px;
-}
-
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -266,5 +262,9 @@ p.text-quote:before {
 .swiper-container-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-  bottom: 86px;
+  position: static;
+  margin-top: 30px;
+  @media (min-width: $tablet) {
+    margin-top: 35px;
+  }
 }
