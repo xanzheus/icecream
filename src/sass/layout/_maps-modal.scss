@@ -49,12 +49,9 @@
     }
 
     @media (min-width: $tablet) {
-        width: 640px;
+        width: auto;
+        
         padding: 20px;
-    }
-
-    @media (min-width: $desktop) {
-        width: 840px;
     }
 
     .locations-modal-backdrop.is-hidden & {
@@ -103,7 +100,6 @@
 
       @media (min-width: $tablet) {
         font-size: 16px;
-        //margin-bottom: 10px;
       }
       @media (min-width: $desktop) {
         font-size: 18px;
@@ -118,14 +114,12 @@
       margin-bottom: 8px;
 
       @media (min-width: $tablet) {
-        width: 600px;
-        height: 450px;
+        width: 75vw;
+        height: 60vh;
         margin-bottom: 10px;
       }
 
       @media (min-width: $desktop) {
-        width: 800px;
-        height: 600px;
         margin-bottom: 16px;
       }
     }
