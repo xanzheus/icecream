@@ -117,27 +117,19 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/order.js":[function(require,module,exports) {
+})({"js/read.js":[function(require,module,exports) {
 (function () {
   var refs = {
-    openOrderBtn: document.querySelector('[data-order-open]'),
-    openOrderSecBtn: document.querySelector('[data-order-open-second]'),
-    openOrder3Btn: document.querySelector('[data-order-open-3]'),
-    openOrder4Btn: document.querySelector('[data-order-open-4]'),
-    openOrder5Btn: document.querySelector('[data-order-open-5]'),
-    closeOrderBtn: document.querySelector('[data-order-close]'),
-    order: document.querySelector('[data-order]')
+    openReadBtn: document.querySelector('[data-read-open]'),
+    closeReadBtn: document.querySelector('[data-read-close]'),
+    read: document.querySelector('[data-read]')
   };
-  refs.openOrderBtn.addEventListener('click', toggleOrder);
-  refs.openOrderSecBtn.addEventListener('click', toggleOrder);
-  refs.openOrder3Btn.addEventListener('click', toggleOrder);
-  refs.openOrder4Btn.addEventListener('click', toggleOrder);
-  refs.openOrder5Btn.addEventListener('click', toggleOrder);
-  refs.closeOrderBtn.addEventListener('click', toggleOrder);
+  refs.openReadBtn.addEventListener('click', toggleRead);
+  refs.closeReadBtn.addEventListener('click', toggleRead);
 
-  function toggleOrder() {
-    document.body.classList.toggle("order-open");
-    refs.order.classList.toggle('is-hidden');
+  function toggleRead() {
+    document.body.classList.toggle("read-open");
+    refs.read.classList.toggle('is-hidden');
   }
 })();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -343,5 +335,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/order.js"], null)
-//# sourceMappingURL=/order.26c1b8da.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/read.js"], null)
+//# sourceMappingURL=/read.c399e94e.js.map
