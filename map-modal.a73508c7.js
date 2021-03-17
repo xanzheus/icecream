@@ -117,65 +117,26 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/mobile-menu.js":[function(require,module,exports) {
+})({"js/map-modal.js":[function(require,module,exports) {
 (function () {
-  var menuBtnRef = document.querySelector("[data-menu-button]");
-  var mobileMenuNatRef = document.querySelector("[data-menu-nat]");
-  var btnNoneRef = document.querySelector("[data-menu-none]");
-  var btnNoneSecondRef = document.querySelector("[data-menu-none-second]");
-  var mobileBtnClose = document.querySelector("[data-menu-close]");
-  var mobileBtnClose1 = document.querySelector("[data-menu-close-1]");
-  var mobileBtnClose2 = document.querySelector("[data-menu-close-2]");
-  var mobileBtnClose3 = document.querySelector("[data-menu-close-3]");
-  var mobileBtnClose4 = document.querySelector("[data-menu-close-4]");
-  var mobileBtnClose5 = document.querySelector("[data-menu-close-5]");
-  menuBtnRef.addEventListener("click", function () {
-    mobileMenuNatRef.classList.toggle("is-open");
-    btnNoneRef.classList.toggle("is-none");
-    btnNoneSecondRef.classList.toggle("is-none");
-  });
-  menuBtnRef.addEventListener("click", toggleMenu);
+  var refs = {
+    openModalMapBtn: document.querySelector('[data-modal-map-open]'),
+    closeModalMapBtn: document.querySelector('[data-modal-map-close]'),
+    modalMap: document.querySelector('[data-modal-map]')
+  };
+  var deviceWidth = window.innerWidth > 0 ? window.innerWidth : window.screen.width;
 
-  function toggleMenu() {
-    document.body.classList.toggle("menu-open-nat");
+  if (deviceWidth < 768) {
+    window.open("https://g.page/goitua?share");
+  } else {
+    refs.openModalMapBtn.addEventListener('click', toggleModal);
+    refs.closeModalMapBtn.addEventListener('click', toggleModal);
+
+    function toggleModal() {
+      document.body.classList.toggle("read-open");
+      refs.modalMap.classList.toggle('is-hidden');
+    }
   }
-
-  mobileBtnClose.addEventListener("click", function () {
-    mobileMenuNatRef.classList.toggle("is-open");
-    btnNoneRef.classList.toggle("is-none");
-    btnNoneSecondRef.classList.toggle("is-none");
-    document.body.classList.toggle("menu-open-nat");
-  });
-  mobileBtnClose1.addEventListener("click", function () {
-    mobileMenuNatRef.classList.toggle("is-open");
-    btnNoneRef.classList.toggle("is-none");
-    btnNoneSecondRef.classList.toggle("is-none");
-    document.body.classList.toggle("menu-open-nat");
-  });
-  mobileBtnClose2.addEventListener("click", function () {
-    mobileMenuNatRef.classList.toggle("is-open");
-    btnNoneRef.classList.toggle("is-none");
-    btnNoneSecondRef.classList.toggle("is-none");
-    document.body.classList.toggle("menu-open-nat");
-  });
-  mobileBtnClose3.addEventListener("click", function () {
-    mobileMenuNatRef.classList.toggle("is-open");
-    btnNoneRef.classList.toggle("is-none");
-    btnNoneSecondRef.classList.toggle("is-none");
-    document.body.classList.toggle("menu-open-nat");
-  });
-  mobileBtnClose4.addEventListener("click", function () {
-    mobileMenuNatRef.classList.toggle("is-open");
-    btnNoneRef.classList.toggle("is-none");
-    btnNoneSecondRef.classList.toggle("is-none");
-    document.body.classList.toggle("menu-open-nat");
-  });
-  mobileBtnClose5.addEventListener("click", function () {
-    mobileMenuNatRef.classList.toggle("is-open");
-    btnNoneRef.classList.toggle("is-none");
-    btnNoneSecondRef.classList.toggle("is-none");
-    document.body.classList.toggle("menu-open-nat");
-  });
 })();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -380,5 +341,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/mobile-menu.js"], null)
-//# sourceMappingURL=/mobile-menu.02d75e0a.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/map-modal.js"], null)
+//# sourceMappingURL=/map-modal.a73508c7.js.map
