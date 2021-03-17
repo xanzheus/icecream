@@ -783,7 +783,7 @@ h6 {
   }
 }
 
-body.menu-open,
+body.menu-open-nat,
 body.order-open {
   overflow-y: hidden;
 }
@@ -1400,9 +1400,19 @@ body.order-open {
   }
 }
 .gallery {
-  background-image: linear-gradient(to bottom, var(--second-bgc) 45%, var(--light-text-color) 45%, var(--light-text-color) 100%);
+  background-image: linear-gradient(to bottom, var(--second-bgc) 48%, var(--light-text-color) 48%, var(--light-text-color) 100%);
   padding-top: 49px;
   padding-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .gallery {
+    background-image: linear-gradient(to bottom, var(--second-bgc) 45%, var(--light-text-color) 45%, var(--light-text-color) 100%);
+  }
+}
+@media (min-width: 1280px) {
+  .gallery {
+    background-image: linear-gradient(to bottom, var(--second-bgc) 43%, var(--light-text-color) 43%, var(--light-text-color) 100%);
+  }
 }
 @media (min-width: 768px) {
   .gallery {

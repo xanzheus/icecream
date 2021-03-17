@@ -120,26 +120,61 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"js/mobile-menu.js":[function(require,module,exports) {
 (function () {
   var menuBtnRef = document.querySelector("[data-menu-button]");
-  var mobileMenuRef = document.querySelector("[data-menu]");
+  var mobileMenuNatRef = document.querySelector("[data-menu-nat]");
   var btnNoneRef = document.querySelector("[data-menu-none]");
   var btnNoneSecondRef = document.querySelector("[data-menu-none-second]");
   var mobileBtnClose = document.querySelector("[data-menu-close]");
+  var mobileBtnClose1 = document.querySelector("[data-menu-close-1]");
+  var mobileBtnClose2 = document.querySelector("[data-menu-close-2]");
+  var mobileBtnClose3 = document.querySelector("[data-menu-close-3]");
+  var mobileBtnClose4 = document.querySelector("[data-menu-close-4]");
+  var mobileBtnClose5 = document.querySelector("[data-menu-close-5]");
   menuBtnRef.addEventListener("click", function () {
-    mobileMenuRef.classList.toggle("is-open");
+    mobileMenuNatRef.classList.toggle("is-open");
     btnNoneRef.classList.toggle("is-none");
     btnNoneSecondRef.classList.toggle("is-none");
   });
   menuBtnRef.addEventListener("click", toggleMenu);
 
   function toggleMenu() {
-    document.body.classList.toggle("menu-open");
+    document.body.classList.toggle("menu-open-nat");
   }
 
   mobileBtnClose.addEventListener("click", function () {
-    mobileMenuRef.classList.toggle("is-open");
+    mobileMenuNatRef.classList.toggle("is-open");
     btnNoneRef.classList.toggle("is-none");
     btnNoneSecondRef.classList.toggle("is-none");
-    document.body.classList.toggle("menu-open");
+    document.body.classList.toggle("menu-open-nat");
+  });
+  mobileBtnClose1.addEventListener("click", function () {
+    mobileMenuNatRef.classList.toggle("is-open");
+    btnNoneRef.classList.toggle("is-none");
+    btnNoneSecondRef.classList.toggle("is-none");
+    document.body.classList.toggle("menu-open-nat");
+  });
+  mobileBtnClose2.addEventListener("click", function () {
+    mobileMenuNatRef.classList.toggle("is-open");
+    btnNoneRef.classList.toggle("is-none");
+    btnNoneSecondRef.classList.toggle("is-none");
+    document.body.classList.toggle("menu-open-nat");
+  });
+  mobileBtnClose3.addEventListener("click", function () {
+    mobileMenuNatRef.classList.toggle("is-open");
+    btnNoneRef.classList.toggle("is-none");
+    btnNoneSecondRef.classList.toggle("is-none");
+    document.body.classList.toggle("menu-open-nat");
+  });
+  mobileBtnClose4.addEventListener("click", function () {
+    mobileMenuNatRef.classList.toggle("is-open");
+    btnNoneRef.classList.toggle("is-none");
+    btnNoneSecondRef.classList.toggle("is-none");
+    document.body.classList.toggle("menu-open-nat");
+  });
+  mobileBtnClose5.addEventListener("click", function () {
+    mobileMenuNatRef.classList.toggle("is-open");
+    btnNoneRef.classList.toggle("is-none");
+    btnNoneSecondRef.classList.toggle("is-none");
+    document.body.classList.toggle("menu-open-nat");
   });
 })();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -170,7 +205,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58459" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61189" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
