@@ -1,0 +1,51 @@
+.button {
+  padding: 7px 13px;
+  height: 24px;
+  font-size: 8px;
+  line-height: 1.125;
+  border-radius: 20px;
+  border: none;
+  color: var(--accent-primary-color);
+  background-color: var(--light-text-color);
+
+  transition: background-color $time-main $timing-function-main;
+
+  &:focus,
+  &:hover {
+    background-color: var(--light-hover-color);
+  }
+
+  @media screen and (min-width: $desktop) {
+    height: 40px;
+    font-size: 14px;
+    line-height: 1.128;
+    padding: 11px 20px;
+  }
+
+  &--icon {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.312;
+    height: 44px;
+    padding: 0 36px;
+    fill: currentColor;
+  }
+
+  &--secondary {
+    padding: 0 23px;
+    color: var(--light-text-color);
+    background-color: var(--accent-primary-color);
+
+    &:hover,
+    &:focus {
+      background-color: var(--accent-hover-color);
+    }
+
+    @media screen and (min-width: $desktop) {
+      height: 40px;
+      font-size: 14px;
+      line-height: 1.128;
+      padding: 14px 23px;
+    }
+  }
+}

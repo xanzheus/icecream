@@ -1,0 +1,99 @@
+<section class="swiper" id="about">
+  <div class="swiper-container">
+    <h2 class="title visually-hidden">Testimonials</h2>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="slider-block">
+          <div class="slider-avatar">
+            <picture>
+              <source srcset="./images/7-testimonials//repeta.webp" type="image/webp" >
+              <img src="./images/7-testimonials//repeta.jpg" alt="Александр Репета - СТО GoIT">
+            </picture>
+          </div>
+          <div class="slider-bg">
+            <div class="slider-quote">
+              <div class="slider-text">
+                <p class="text-quote">
+                  Все хорошо, все ОК... Windows - для домохозяек, Mac -
+                  для людей, а Линуха - для админов. И еще: если background-color, то
+                  tomato. Для чего мы все это учим 8 недель? Чтоб ты человеком стал!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-adress">
+            <p class="slider-adress-text">Александр, Киев</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="slider-block">
+          <div class="slider-avatar">
+            <picture>
+              <source srcset="./images/7-testimonials//denys.webp" type="image/webp">
+              <img src="./images/7-testimonials//denys.jpg" alt="Денис Хворостяный - ментор GoIT">
+            </picture>
+          </div>
+          <div class="slider-bg">
+            <div class="slider-quote">
+              <div class="slider-text">
+                <p class="text-quote">
+                  Ребята, смотрим макет, и буквально разбираем его на
+                  молекулы... Секция "Отзывы клиентов", можете туда вместо этих
+                  красивых тёть вставить фото одногруппников. Преподов не надо.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-adress">
+            <p class="slider-adress-text">Денис, Одесса</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="slider-block">
+          <div class="slider-avatar">
+            <picture>
+              <source srcset="./images/7-testimonials//sasha.webp" type="image/webp">
+              <img src="./images/7-testimonials//sasha.jpg" alt="Александра Данилюк - client happiness manager GoIT">
+            </picture>
+          </div>
+          <div class="slider-bg">
+            <div class="slider-quote">
+              <div class="slider-text">
+                <p class="text-quote">
+                  Дорогие мои! 32 поток, я в вас верю! Приложите максимум усилий на проекте!
+                  Знаю, что все получится, вы у меня лучшие!!! Всех обняла, поцеловала,
+                  погладила, прижала к сердцу! Мимимишечки&#41;&#41;&#41;
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-adress">
+            <p class="slider-adress-text">Александра, Киев</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '"></span>';
+      },
+    },
+  });
+</script>
